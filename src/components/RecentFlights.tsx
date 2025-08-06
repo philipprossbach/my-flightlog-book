@@ -44,21 +44,21 @@ const RecentFlights = () => {
   ];
 
   return (
-    <Card className="bg-gradient-card border-aviation-silver/20">
-      <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-          <span className="text-foreground">Aktuelle Flüge</span>
-          <Button variant="ghost" size="sm" className="text-aviation-blue hover:text-aviation-navy">
+    <Card className="border-0 shadow-sm">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center justify-between text-lg">
+          <span>Aktuelle Flüge</span>
+          <Button variant="ghost" size="sm" className="text-sm text-muted-foreground hover:text-foreground">
             Alle anzeigen
           </Button>
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-3">
         {flights.map((flight, index) => (
-          <div key={flight.id} className="bg-card/50 rounded-lg p-4 border border-border/50 hover:shadow-elevation transition-all duration-300">
+          <div key={flight.id} className="border rounded-lg p-4 hover:shadow-sm transition-shadow">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-3">
-                <Badge variant="outline" className="text-aviation-blue border-aviation-blue/30">
+                <Badge variant="outline" className="font-mono text-xs">
                   {flight.flightNumber}
                 </Badge>
                 <span className="text-sm text-muted-foreground">{flight.airline}</span>
@@ -66,27 +66,27 @@ const RecentFlights = () => {
                   {flight.type}
                 </Badge>
               </div>
-              <Button variant="ghost" size="sm">
+              <Button variant="ghost" size="icon" className="h-8 w-8">
                 <MoreHorizontal className="w-4 h-4" />
               </Button>
             </div>
             
             <div className="flex items-center gap-4 mb-3">
               <div className="flex-1">
-                <div className="font-semibold text-foreground">{flight.departure.code}</div>
+                <div className="font-semibold">{flight.departure.code}</div>
                 <div className="text-sm text-muted-foreground">{flight.departure.city}</div>
-                <div className="text-sm text-aviation-blue font-medium">{flight.departure.time}</div>
+                <div className="text-sm font-medium">{flight.departure.time}</div>
               </div>
               
               <div className="flex flex-col items-center">
-                <ArrowRight className="w-5 h-5 text-aviation-blue mb-1" />
+                <ArrowRight className="w-4 h-4 text-muted-foreground mb-1" />
                 <div className="text-xs text-muted-foreground">{flight.duration}</div>
               </div>
               
               <div className="flex-1 text-right">
-                <div className="font-semibold text-foreground">{flight.arrival.code}</div>
+                <div className="font-semibold">{flight.arrival.code}</div>
                 <div className="text-sm text-muted-foreground">{flight.arrival.city}</div>
-                <div className="text-sm text-aviation-blue font-medium">{flight.arrival.time}</div>
+                <div className="text-sm font-medium">{flight.arrival.time}</div>
               </div>
             </div>
             

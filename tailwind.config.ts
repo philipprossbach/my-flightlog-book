@@ -26,8 +26,7 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -53,12 +52,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				aviation: {
-					blue: 'hsl(var(--aviation-blue))',
-					navy: 'hsl(var(--aviation-navy))',
-					sky: 'hsl(var(--aviation-sky))',
-					silver: 'hsl(var(--aviation-silver))'
-				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -70,18 +63,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			backgroundImage: {
-				'gradient-aviation': 'var(--gradient-aviation)',
-				'gradient-sky': 'var(--gradient-sky)',
-				'gradient-card': 'var(--gradient-card)'
-			},
 			boxShadow: {
-				'aviation': 'var(--shadow-aviation)',
-				'elevation': 'var(--shadow-elevation)'
+				sm: 'var(--shadow-sm)',
+				DEFAULT: 'var(--shadow)',
+				md: 'var(--shadow-md)',
+				lg: 'var(--shadow-lg)',
 			},
-			transitionTimingFunction: {
-				'smooth': 'var(--transition-smooth)',
-				'bounce': 'var(--transition-bounce)'
+			transitionProperty: {
+				DEFAULT: 'var(--transition)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

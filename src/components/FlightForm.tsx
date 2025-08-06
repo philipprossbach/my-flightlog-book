@@ -26,10 +26,10 @@ const FlightForm = () => {
   };
 
   return (
-    <Card className="bg-gradient-card border-aviation-silver/20">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-foreground">
-          <Plane className="w-5 h-5 text-aviation-blue" />
+    <Card className="border-0 shadow-sm">
+      <CardHeader className="pb-4">
+        <CardTitle className="flex items-center gap-2">
+          <Plane className="w-5 h-5" />
           Neuen Flug hinzufügen
         </CardTitle>
       </CardHeader>
@@ -41,7 +41,7 @@ const FlightForm = () => {
             <Input 
               id="departure" 
               placeholder="z.B. FRA" 
-              className="bg-background border-border focus:border-aviation-blue transition-colors"
+              className="focus-visible:ring-1"
             />
           </div>
           <div className="space-y-2">
@@ -49,7 +49,7 @@ const FlightForm = () => {
             <Input 
               id="arrival" 
               placeholder="z.B. JFK" 
-              className="bg-background border-border focus:border-aviation-blue transition-colors"
+              className="focus-visible:ring-1"
             />
           </div>
         </div>
@@ -200,12 +200,12 @@ const FlightForm = () => {
         <div className="flex gap-3 pt-4">
           <Button 
             variant="outline" 
-            className="flex-1 border-border text-muted-foreground hover:border-aviation-blue hover:text-aviation-blue transition-colors"
+            className="flex-1"
           >
             Abbrechen
           </Button>
           <Button 
-            className="flex-1 bg-gradient-aviation hover:shadow-aviation transition-all duration-300"
+            className="flex-1"
           >
             Flug speichern
           </Button>
