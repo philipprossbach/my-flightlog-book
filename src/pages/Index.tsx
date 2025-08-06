@@ -1,12 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import FlightStats from "@/components/FlightStats";
+import RecentFlights from "@/components/RecentFlights";
+import FlightForm from "@/components/FlightForm";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-sky">
+      <Header />
+      <main className="container mx-auto px-4 py-8 space-y-8">
+        <HeroSection />
+        <FlightStats />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <RecentFlights />
+          <FlightForm />
+        </div>
+      </main>
     </div>
   );
 };
