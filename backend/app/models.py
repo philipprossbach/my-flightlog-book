@@ -16,6 +16,7 @@ class User(Base):
 
 class Flight(Base):
     __tablename__ = "flights"
+
     id = Column(Integer, primary_key=True)
     departure_airport = Column(String, nullable=False)
     departure_datetime = Column(DateTime, nullable=False)
@@ -23,3 +24,8 @@ class Flight(Base):
     arrival_datetime = Column(DateTime, nullable=False)
     flight_number = Column(String, nullable=False)
     flight_type = Column(Enum(FlightTypeEnum), nullable=False)
+    airline = Column(String)
+    seat_number = Column(String)
+    aircraft_registration = Column(String)
+    aircraft_type = Column(String)
+    comment = Column(String)
